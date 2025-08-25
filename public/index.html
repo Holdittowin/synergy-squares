@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synergy Squares</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Authentication section -->
+    <div id="auth" class="card">
+      <h2>Synergy Squares</h2>
+      <div id="auth-forms">
+        <!-- Login form -->
+        <form id="loginForm" class="auth-form">
+          <h3>Login</h3>
+          <label>Email<br /><input type="email" id="loginEmail" required /></label><br />
+          <label>Password<br /><input type="password" id="loginPassword" required /></label><br />
+          <button type="submit">Login</button>
+        </form>
+        <hr />
+        <!-- Registration form -->
+        <form id="registerForm" class="auth-form">
+          <h3>Register</h3>
+          <label>Nickname<br /><input type="text" id="regNickname" required /></label><br />
+          <label>Email<br /><input type="email" id="regEmail" required /></label><br />
+          <label>Password<br /><input type="password" id="regPassword" required /></label><br />
+          <label>Country<br /><input type="text" id="regCountry" required /></label><br />
+          <button type="submit">Register</button>
+        </form>
+      </div>
+      <p id="authMessage" class="message"></p>
+    </div>
+    <!-- Game section (hidden until logged in) -->
+    <div id="game" class="hidden">
+      <div id="header" class="card">
+        <span id="welcome"></span>
+        <button id="logoutBtn">Logout</button>
+      </div>
+      <div id="status" class="card">
+        <span id="levelInfo"></span>
+        <span id="playersInfo"></span>
+      </div>
+      <div id="board" class="board"></div>
+      <p id="completionMessage" class="message"></p>
+      <div id="leaderboards" class="card">
+        <h3>Leaderboards</h3>
+        <div id="globalLeaderboard">
+          <h4>Global</h4>
+          <table id="globalTable"></table>
+        </div>
+        <div id="countryLeaderboard">
+          <h4>Your Country</h4>
+          <table id="countryTable"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
